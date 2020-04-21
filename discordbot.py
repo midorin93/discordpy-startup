@@ -2,16 +2,18 @@
 from discord.ext import commands
 import os
 import traceback
+import random
+import asyncio #sleepを使うのに必要
 
 bot = commands.Bot(command_prefix='/')
-token = os.environ['DISCORD_BOT_TOKEN']
+token = os.environ['NzAyMTg0MjA2NzcxNTUyMjc4.Xp8lKA.kGk2uZx4MnIEDAo7wb5p-Zt4fLY']
 
 
 @bot.event
-async def on_command_error(ctx, error):
+async def on_command_error(ctx, message, error):
     orig_error = getattr(error, "original", error)
     error_msg = ''.join(traceback.TracebackException.from_exception(orig_error).format())
-    await ctx.send(error_msg)
+
 
 
 @bot.command()
@@ -20,17 +22,10 @@ async def ping(ctx):
     
 @bot.command()
 async def homeharu(ctx):
-    await ctx.send('ryo')
+    await ctx.send('卍sexyryo卍')
 
-
-    
-import discord
-client = discord.Client()
-
-import random
-import asyncio #sleepを使うのに必要
-import discord ##discordでBOTを使うのにこれが必ずいる
-
+@bot.command()
+async def on_message(message):
 if message.content == "スロット":
 kakuritsu = random.randint(1, 399)
 slot_list = [':yamasho:', ':NK_3rd:', ':NK_2nd:', ':mocchiup:', ':higasho:', ':domenfuuuuck:', ':ganjaR:']
