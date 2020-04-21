@@ -22,7 +22,7 @@ async def ping(ctx):
 
 @bot.event
 async def on_message(message):
-  if message.content.startswith(":homeharu:", "スロット"):
+  if message.content.startswith(":homeharu:", ':homeharu:', "スロット"):
   kakuritsu = random.randint(1, 399)
   slot_list = [':yamasho:', ':NK_3rd:', ':NK_2nd:', ':mocchiup:', ':higasho:', ':domenfuuuuck:', ':ganjaR:']
   A = random.choice(slot_list)
