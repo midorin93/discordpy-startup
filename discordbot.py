@@ -1,6 +1,9 @@
 from discord.ext import commands
 import os
 import traceback
+import random
+import asyncio #sleepを使うのに必要
+import discord ##discordでBOTを使うのにこれが必ずいる
 
 bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
@@ -16,13 +19,6 @@ async def on_command_error(ctx, error):
 @bot.command()
 async def ping(ctx):
     await ctx.send('pong')
-
-    
-import random
-import asyncio #sleepを使うのに必要
-import discord ##discordでBOTを使うのにこれが必ずいる
-
-@bot.command()
 if message.content == "スロット":
 kakuritsu = random.randint(1, 399)
 slot_list = [':yamasho:', ':NK_3rd:', ':NK_2nd:', ':mocchiup:', ':higasho:', ':domenfuuuuck:', ':ganjaR:']
