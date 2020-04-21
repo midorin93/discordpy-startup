@@ -22,6 +22,7 @@ import random
 import asyncio #sleepを使うのに必要
 import discord ##discordでBOTを使うのにこれが必ずいる
 
+@bot.command()
 if message.content == "スロット":
 kakuritsu = random.randint(1, 399)
 slot_list = [':yamasho:', ':NK_3rd:', ':NK_2nd:', ':mocchiup:', ':higasho:', ':domenfuuuuck:', ':ganjaR:']
