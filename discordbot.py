@@ -6,7 +6,7 @@ import random
 import asyncio #sleepを使うのに必要
 
 bot = commands.Bot(command_prefix='/')
-token = os.environ['NzAyMTg0MjA2NzcxNTUyMjc4.Xp8lKA.kGk2uZx4MnIEDAo7wb5p-Zt4fLY']
+token = os.environ['DISCORD_BOT_TOKEN']
 
 
 @bot.event
