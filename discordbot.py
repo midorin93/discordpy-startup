@@ -19,7 +19,7 @@ async def ping(ctx):
     await ctx.send('pong')
     
 @bot.command()
-async def sexy(ctx):
+async def homeharu(ctx):
     await ctx.send('ryo')
 
 
