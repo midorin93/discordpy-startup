@@ -7,6 +7,7 @@ import asyncio #sleepを使うのに必要
 
 bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
+client = discord.Client()
 
 
 @bot.event
@@ -24,7 +25,7 @@ async def ping(ctx):
 async def homeharu(ctx):
     await ctx.send('卍sexyryo卍')
 
-@bot.event
+@client.event
 async def on_message(message):
   if message.content == "スロット":
   kakuritsu = random.randint(1, 399)
