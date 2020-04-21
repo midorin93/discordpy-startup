@@ -19,6 +19,8 @@ async def on_command_error(ctx, error):
 @bot.command()
 async def ping(ctx):
     await ctx.send('pong')
+    
+@bot.command()
 if message.content == "スロット":
 kakuritsu = random.randint(1, 399)
 slot_list = [':yamasho:', ':NK_3rd:', ':NK_2nd:', ':mocchiup:', ':higasho:', ':domenfuuuuck:', ':ganjaR:']
