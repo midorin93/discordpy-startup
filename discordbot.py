@@ -24,20 +24,20 @@ async def ping(ctx):
 async def homeharu(ctx):
     await ctx.send('卍sexyryo卍')
 
-@bot.command()
+@bot.event
 async def on_message(message):
-if message.content == "スロット":
-kakuritsu = random.randint(1, 399)
-slot_list = [':yamasho:', ':NK_3rd:', ':NK_2nd:', ':mocchiup:', ':higasho:', ':domenfuuuuck:', ':ganjaR:']
-A = random.choice(slot_list)
-B = random.choice(slot_list)
-C = random.choice(slot_list)
-if int(kakuritsu) == int(1): #確率は1/399
-await client.send_message(message.channel, "イク！")
-await asyncio.sleep(2) #2秒間待ってやる
-await client.send_message(message.channel, ':abe:', ':abe:', ':abe:') #abeだけ出るように指定
-else:
-await client.send_message(message.channel, "%s%s%s" % (A, B, C))    
+  if message.content == "スロット":
+  kakuritsu = random.randint(1, 399)
+  slot_list = [':yamasho:', ':NK_3rd:', ':NK_2nd:', ':mocchiup:', ':higasho:', ':domenfuuuuck:', ':ganjaR:']
+  A = random.choice(slot_list)
+  B = random.choice(slot_list)
+  C = random.choice(slot_list)
+  if int(kakuritsu) == int(1): #確率は1/399
+  await client.send_message(message.channel, "イク！")
+  await asyncio.sleep(2) #2秒間待ってやる
+  await client.send_message(message.channel, ':abe:', ':abe:', ':abe:') #abeだけ出るように指定
+  else:
+  await client.send_message(message.channel, "%s%s%s" % (A, B, C))    
     
     
     
