@@ -27,6 +27,7 @@ async def homeharu(ctx):
 
 @client.event
 async def on_message(message):
+  if message.content == ":homeharu:":
   if message.content == "スロット":
   kakuritsu = random.randint(1, 399)
   slot_list = [':yamasho:', ':NK_3rd:', ':NK_2nd:', ':mocchiup:', ':higasho:', ':domenfuuuuck:', ':ganjaR:']
